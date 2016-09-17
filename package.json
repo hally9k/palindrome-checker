@@ -4,6 +4,10 @@
   "description": "A NodeJS implementation of a palindrome checker.",
   "repository": "https://github.com/hally9k/palindrome-checker.git",
   "main": "index.js",
+  "engines" : {
+    "npm" : "3.10.3",
+    "node": "6.3.1"
+  },
   "scripts": {
     "start": "npm i && npm t",
     "test": "./node_modules/.bin/mocha --reporter spec test/index.spec.js",
