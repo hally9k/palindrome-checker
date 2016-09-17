@@ -1,0 +1,28 @@
+{
+  "name": "palindrome-checker",
+  "version": "0.0.1",
+  "description": "A NodeJS implementation of a palindrome checker.",
+  "repository": "https://github.com/hally9k/palindrome-checker.git",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm i && npm t",
+    "test": "./node_modules/.bin/mocha --reporter spec test/index.spec.js",
+    "test:auto": "./node_modules/.bin/mocha --reporter spec --watch test/index.spec.js",
+    "test:perf": "./node_modules/.bin/mocha --reporter spec test/index.perf.js",
+    "test:perf:auto": "./node_modules/.bin/mocha --reporter spec --watch test/index.perf.js",
+    "test:all": "./node_modules/.bin/mocha --reporter spec test/*.js",
+    "test:all:auto": "./node_modules/.bin/mocha --reporter spec --watch test/*.js"
+  },
+  "author": "hally9k",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2",
+    "lodash.sum": "^4.0.2",
+    "microtime": "^2.1.1",
+    "sinon": "^1.17.5"
+  },
+  "dependencies": {
+    "lodash.isstring": "^4.0.1"
+  }
+}
