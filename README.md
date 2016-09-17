@@ -2,6 +2,9 @@
 
 ##Detects palindromes.
 
+A simple palindrome detector written in NodeJS.
+Started playing around with performance testing for fun. index.js has an alternative (slower) implementation in it that is commented out. Uncomment to compare the results of the performance tests.
+
 - To install the dependencies and run the functional tests:
 ```
 npm start;
