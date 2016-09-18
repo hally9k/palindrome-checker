@@ -32,8 +32,19 @@ function isPalindrome(string) {
 
 function validateInputIsString(input) {
   if(!isString(input)){
-    throw new Error('palindrome-checker requires a string as input. The given input\'s type was "' + typeof input + '".');
+    let type = getType(input);
+    throw new Error('palindrome-checker requires a string as input. The given input\'s type was "' + type + '".');
   }
+}
+
+function getType(input) {
+  let type;
+  if(input === null) {
+    type = 'null';
+  } else {
+    type = typeof input;
+  }
+  return type;
 }
 
 function proccessInputString(string) {

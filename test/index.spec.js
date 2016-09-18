@@ -101,4 +101,28 @@ describe("Palindrome Checker Functional Tests", function() {
     expect(errorMessage).to.equal('palindrome-checker requires a string as input. The given input\'s type was "function".');
   });
 
+  it('throws an error with a good message when the input is a symbol', () => {
+    let isPalindromeSpy = sinon.spy(isPalindrome);
+    let errorMessage = null;
+    try {
+      let result = isPalindromeSpy(Symbol());
+    } catch(e) {
+      errorMessage = e.message;
+    }
+    expect(isPalindromeSpy.threw()).to.be.true;
+    expect(errorMessage).to.equal('palindrome-checker requires a string as input. The given input\'s type was "symbol".');
+  });
+
+  it('throws an error with a good message when the input is null', () => {
+    let isPalindromeSpy = sinon.spy(isPalindrome);
+    let errorMessage = null;
+    try {
+      let result = isPalindromeSpy(null);
+    } catch(e) {
+      errorMessage = e.message;
+    }
+    expect(isPalindromeSpy.threw()).to.be.true;
+    expect(errorMessage).to.equal('palindrome-checker requires a string as input. The given input\'s type was "null".');
+  });
+
 });
